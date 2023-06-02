@@ -26,7 +26,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
-    <layout class="QHBoxLayout" name="MainWidget">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="15,85">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_Left">
        <item>
@@ -308,23 +308,20 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-     </item>
-     <item>
       <widget class="QGraphicsView" name="graphicsView_visualSorting">
        <property name="enabled">
         <bool>true</bool>
        </property>
        <property name="minimumSize">
         <size>
-         <width>1500</width>
+         <width>1200</width>
          <height>750</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>1500</width>
-         <height>750</height>
+         <width>16777215</width>
+         <height>16777215</height>
         </size>
        </property>
        <property name="font">
