@@ -20,8 +20,10 @@ Widget::Widget(QWidget *parent)
 
     appStates=0;//-1 App started
 
-    sceneHeight=ui->graphicsView_visualSorting->size().height();qDebug()<<"sH:"<<sceneHeight;
-    sceneWidth=ui->graphicsView_visualSorting->size().width();qDebug()<<"sW:"<<sceneWidth;
+    sceneHeight=ui->graphicsView_visualSorting->size().height();
+    qDebug()<<"sH:"<<sceneHeight;
+    sceneWidth=ui->graphicsView_visualSorting->size().width();
+    qDebug()<<"sW:"<<sceneWidth;
     comparisionCount=0;
 
 
@@ -181,8 +183,9 @@ void Widget::randomArray()
 
 void Widget::on_pushButton_sort_clicked()
 {
-    qDebug()<<"sortButton clicked.";
-    algorithmKey=ui->comboBox_sorting->currentIndex();qDebug()<<"algorithmkey:"<<algorithmKey;
+//    qDebug()<<"sortButton clicked.";
+    algorithmKey=ui->comboBox_sorting->currentIndex();
+//    qDebug()<<"algorithmkey:"<<algorithmKey;
     switch(appStates)
     {
         case 0:
@@ -191,13 +194,13 @@ void Widget::on_pushButton_sort_clicked()
             threadUpdate(sortingDelay, algorithmKey);
             stThread->start();
             ui->pushButton_ramdonArray->setDisabled(true);
-            qDebug()<<appStates<<"(pushbutton)";
+//            qDebug()<<appStates<<"(pushbutton)";
             break;
 
         case 1:
             stThread->terminate();
             sortButtonStates(2);
-            qDebug()<<appStates<<"(pushbutton)";
+//            qDebug()<<appStates<<"(pushbutton)";
             break;
 
         case 2:
@@ -208,7 +211,7 @@ void Widget::on_pushButton_sort_clicked()
             columnsHeight.clear();
             ArraySetup(sortingDelay, static_cast<int>(ColumnsAmount));
             sortButtonStates(0);
-            qDebug()<<appStates<<"(pushbutton)";
+//            qDebug()<<appStates<<"(pushbutton)";
             break;
 
         default:
@@ -219,15 +222,15 @@ void Widget::on_pushButton_sort_clicked()
 
 void Widget::on_pushButton_ramdonArray_clicked()
 {
-    qDebug()<<"ramdomArrayStart================";
-    qDebug()<<"appStates:"<<appStates;
+//    qDebug()<<"ramdomArrayStart================";
+//    qDebug()<<"appStates:"<<appStates;
     if(appStates==0)
     {
         resetArray(ui->horizontalSlider->value(),ui->spinBox_ArraySize->value()*10);
 
     }
-    qDebug()<<"appStates::"<<appStates;
-    qDebug()<<"randomArrayEnd==================";
+//    qDebug()<<"appStates::"<<appStates;
+//    qDebug()<<"randomArrayEnd==================";
 }
 
 void Widget::on_horizontalSlider_valueChanged(int ms)

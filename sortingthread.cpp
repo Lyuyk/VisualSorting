@@ -1,5 +1,6 @@
 #include "sortingthread.h"
 
+
 sortingThread::sortingThread(int ms,int algorithm,int n,std::vector<double>columns,QObject *parent=nullptr):QThread(parent)
 {
     sortingAlgorithm=algorithm;

@@ -20,10 +20,10 @@ protected:
     void run()override;
 
 private:
-    std::vector<double> columnsHeight;
+    std::vector<double> columnsHeight;//
     int sortDoneDelay;
     int sortingDelay;
-    int amount;
+    int amount;//数量
     int sortingAlgorithm;
     int arrayAccessVariable;
 
